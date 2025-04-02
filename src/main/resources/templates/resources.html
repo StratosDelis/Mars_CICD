@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Mars CICD</title>
+</head>
+<body>
+    <h1>Mars CICD - Manage the Space Station Resources</h1>
+    <a href="/resources/add">Add new Resources</a>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Planet of Origin</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+        <tr th:each="resource : ${resources}">
+            <td th:text="${resource.id}"></td>
+            <td th:text="${resource.name}"></td>
+            <td th:text="${resource.description}"></td>
+            <td th:text="${resource.planet_of_origin}"></td>
+            <td th:text="${resource.price}"></td>
+            <td>
+                <a th:href="@{/resources/edit/{id}(id=${resource.id})}">Edit</a>
+                <a th:href="@{/resources/delete/{id}(id=${resource.id})}">Delete</a>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
