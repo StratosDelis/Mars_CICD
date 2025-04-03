@@ -14,14 +14,14 @@ jobs:
     - uses: actions/checkout@v4
     
     - name: Set up JDK 17
-      uses: actions/setup-java@v3
+      uses: actions/setup-java@v4
       with:
         java-version: '17'
         distribution: 'temurin'
         cache: 'maven'
     
     - name: Speed up maven dependency downloading
-        uses: actions/cache@v3 # Caches Maven dependencies to speed up builds
+      uses: actions/cache@v4 # Caches Maven dependencies to speed up builds
         with:
         path: ~/.m2
         key: maven-${{ hashFiles('**/pom.xml') }} # Generates cache key based on `pom.xml`
