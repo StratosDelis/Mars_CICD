@@ -33,13 +33,12 @@ jobs:
     - name: Run Checkstyle
       run: mvn checkstyle:check
       
-
     - name: Check Docker Installation
-        run: docker --version
+      run: docker --version
 
-      - name: Verify Dockerfile Exists
-        run: ls -la
+    - name: Verify Dockerfile Exists
+      run: ls -la
 
-      - name: Log in to Docker Hub
-        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+    - name: Log in to Docker Hub
+      run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
