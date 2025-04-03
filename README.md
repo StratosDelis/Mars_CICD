@@ -5,7 +5,6 @@
 ### Specifications:
     Maven: 3.9.9
     Java: 17
-
 ### Running the app:
     1. Clone
     2. Maven build: mvn clean package
