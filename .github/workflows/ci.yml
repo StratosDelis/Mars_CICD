@@ -22,7 +22,7 @@ jobs:
  
     - name: Speed up maven dependency downloading
       uses: actions/cache@v4 # Caches Maven dependencies to speed up builds
-        with:
+      with:
         path: ~/.m2
         key: maven-${{ hashFiles('**/pom.xml') }} # Generates cache key based on `pom.xml`
         restore-keys: maven- # Allows fallback to older cache   version    
