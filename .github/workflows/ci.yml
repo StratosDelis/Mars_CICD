@@ -19,7 +19,7 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: 'maven'
-    
+ 
     - name: Speed up maven dependency downloading
       uses: actions/cache@v4 # Caches Maven dependencies to speed up builds
         with:
