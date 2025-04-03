@@ -8,12 +8,12 @@
 
 ### Running the app:
 * Clone
-* Maven build: mvn clean package
-* Running:     java -jar target/Mars\_CICD-0.0.1-SNAPSHOT.jar
+* Maven build: `mvn clean package`
+* Running:     `java -jar target/Mars\_CICD-0.0.1-SNAPSHOT.jar`
 * Application: http://localhost:8080/resources
 
 ### And using Docker:
 
-* Build image: docker build -t mars\_cicd:latest .
-* Run:         docker run -p 8080:8080 resources:latest
+* Build image: `docker build -t mars\_cicd:latest .`
+* Run:         `docker run -p 8080:8080 resources:latest`
 * Application: http://localhost:8080/resources
