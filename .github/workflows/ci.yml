@@ -19,14 +19,17 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: 'maven'
-    -name: Speed up maven dependency downloading
+    
+    - name: Speed up maven dependency downloading
         uses: actions/cache@v3 # Caches Maven dependencies to speed up builds
         with:
         path: ~/.m2
         key: maven-${{ hashFiles('**/pom.xml') }} # Generates cache key based on `pom.xml`
         restore-keys: maven- # Allows fallback to older cache   version    
+    
     - name: Build with Maven
       run: mvn clean package test
       
     - name: Run Checkstyle
       run: mvn checkstyle:check
+
